@@ -20,11 +20,11 @@ export default function Sidebar({ children }: SidebarProps): JSX.Element {
   return (
     <aside className="h-screen">
       <nav className="h-full flex flex-col bg-white border-r shadow-sm">
-        <div className="p-4 pb-2 flex justify-between items-center">
+        <div className="p-4 pb-2 flex justify-between items-start">
           <Image
             src="/img/LogoStarDash.svg"
             className={`overflow-hidden transition-all ${
-              expanded ? "w-12" : "w-12"
+              expanded ? "w-auto" : "w-auto"
             }`}
             width={20}
             height={20}
@@ -45,15 +45,15 @@ export default function Sidebar({ children }: SidebarProps): JSX.Element {
               <Image
                 src="/img/expand.svg"
                 className="rotate-180"
-                width={20}
-                height={20}
+                width={12}
+                height={12}
                 alt="Picture of the author"
               />
             ) : (
               <Image
                 src="/img/expand.svg"
-                width={20}
-                height={20}
+                width={12}
+                height={12}
                 alt="Picture of the author"
               />
             )}
@@ -61,7 +61,7 @@ export default function Sidebar({ children }: SidebarProps): JSX.Element {
         </div>
 
         <SidebarContext.Provider value={{ expanded }}>
-          <ul className="flex-1 px-3">            
+          <ul className="flex-1 px-4">            
               {children}
           </ul>
         </SidebarContext.Provider>
