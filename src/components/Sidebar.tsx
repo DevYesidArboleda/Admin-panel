@@ -18,7 +18,7 @@ export default function Sidebar({ children }: SidebarProps): JSX.Element {
   const [expanded, setExpanded] = useState(true);
 
   return (
-    <aside className="h-screen">
+    <aside className="h-screen row-span-2">
       <nav className="h-full flex flex-col bg-white border-r shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-start">
           <Image
